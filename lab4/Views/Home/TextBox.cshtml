@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "TextBox";
+}
+
+<h2>TextBox</h2>
+@if (ViewData.ContainsKey("textBoxValue"))
+{
+    <p style="font-weight:bold">Text:</p>
+    <p>@ViewData["textBoxValue"]</p>
+}
+else
+{
+    <form method="post" class="form-horizontal" role="form">
+        <div class="form-group">
+            <div class="col-md-4">
+                <label>Text</label>
+                <input type="text" name="value" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">
+                <input type="submit" class="btn btn-default" value="Submit" />
+            </div>
+        </div>
+    </form>
+}

@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Radio";
+}
+
+<h2>Radio</h2>
+@if (ViewData.ContainsKey("radioValue"))
+{
+    <p style="font-weight:bold">Month:</p>
+    <p>@ViewData["radioValue"]</p>
+}
+else
+{
+    <form method="post" class="form-horizontal" role="form">
+        <div class="form-group">
+            <label>Month</label>
+            <p><input type="radio" name="value" value="January" />January</p>
+            <p><input type="radio" name="value" value="February" />February</p>
+            <p><input type="radio" name="value" value="March" />March</p>
+            <p><input type="radio" name="value" value="April" />April</p>
+            <p><input type="radio" name="value" value="May" />May</p>
+            <p><input type="radio" name="value" value="June" />June</p>
+            <p><input type="radio" name="value" value="July" />July</p>
+            <p><input type="radio" name="value" value="August" />August</p>
+            <p><input type="radio" name="value" value="September" />September</p>
+            <p><input type="radio" name="value" value="October" />October</p>
+            <p><input type="radio" name="value" value="November" />November</p>
+            <p><input type="radio" name="value" value="December" />December</p>
+        </div>
+        <div class="form-group">
+            <div class="col-md-2">
+                <input type="submit" class="btn btn-default" value="Submit" />
+            </div>
+        </div>
+    </form>
+}
